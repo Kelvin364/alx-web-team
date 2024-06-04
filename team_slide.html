@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Slider | Dev Mode</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./team_slide.css">
+</head>
+<body>
+
+  <section class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="./image/jac.jpeg" alt="card image">
+        </div>
+        <div class="card__content">
+          <span class="card__title">Marketing Manager</span>
+          <span class="card__name">Jacinta Gitau</span>
+          <div class="card__socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above card structure for other users -->
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="./image/darcy.jpeg" alt="card image">
+        </div>
+        <div class="card__content">
+          <span class="card__title">Recruitment & CX Fellow</span>
+          <span class="card__name">Darcy Rurangwa</span>
+          <div class="card__socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="/image/nimie.jpeg" alt="card image">
+        </div>
+        <div class="card__content">
+          <span class="card__title">Kigali City Director</span>
+          <span class="card__name">Nimie Chaylone</span>
+          <div class="card__socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div> <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="/image/ced.png" alt="card image">
+        </div>
+        <div class="card__content">
+          <span class="card__title">Hub Community & Operations Intern</span>
+          <span class="card__name">Cedric Ngabo</span>
+          <div class="card__socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div> <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="/image/willy.jpeg" alt="card image">
+        </div>
+        <div class="card__content">
+          <span class="card__title">Entrepreneurship Development Manager</span>
+          <span class="card__name">Willy Nsabiyumva</span>
+          <div class="card__socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div> <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="./image/dmx.jpeg" alt="card image">
+        </div>
+        <div class="card__content">
+          <span class="card__title">Learning & Community Experience Associate</span>
+          <span class="card__name">Dimitri Agabe</span>
+          <div class="card__socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+  <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper2 = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 2,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        swiper2.slideTo(index);
+      });
+    });
+  </script>
+</body>
+</html>
